@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Carpeta} from '../objects/carpeta';
+import {logger} from 'codelyzer/util/logger';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,17 @@ export class ServicioCarpetaService {
 
   getCarpetas(){
     return this.httpClient.get<Carpeta[]>(this.url);
+  }
+
+  getCarpeta(nombre: string){
+    return this.httpClient.get<Carpeta>(this.url + '/' + nombre);
+  }
+
+  añadirCarpeta(carpeta: Carpeta) {
+    debugger;
+    const res = this.httpClient.post<boolean>(this.url, carpeta);
+    console.log(res);
+    return res;
   }
 
 

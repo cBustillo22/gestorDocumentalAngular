@@ -1,0 +1,13 @@
+<div class="container agregar">
+  <img src="assets/images/folder.png" alt="Carpeta" class="rounded-0 imagen">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombreCarpeta">Nombre: </label>
+      <input type="text" class="form-control" id="nombreCarpeta" formControlName="nombre">
+      <small class="form-text text-muted">Introduce el nombre de la nueva carpeta</small>
+    </div>
+    <button type="submit" class="btn btn-success">Agregar</button>
+  </form>
+</div>
+
+

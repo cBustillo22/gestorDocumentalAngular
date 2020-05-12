@@ -4,21 +4,32 @@ import {ListaCarpetasComponent} from '../components/lista-carpetas/lista-carpeta
 import {HeaderComponent} from '../components/header/header.component';
 import {ListaDocumentosComponent} from '../components/lista-documentos/lista-documentos.component';
 import {InfoCarpetaComponent} from '../components/lista-carpetas/info-carpeta/info-carpeta.component';
+import {AgregarCarpetaComponent} from '../components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
 
 const routes: Routes = [
+  {
+    path: '', redirectTo: 'carpetas', pathMatch: 'full'
+  },
   {
     path: 'carpetas',
     component: ListaCarpetasComponent,
     children:[
       {
-        path: 'infoCarpeta',
+        path: 'infoCarpeta/:nombre',
         component: InfoCarpetaComponent
+      },
+      {
+        path: 'agregarCarpeta',
+        component: AgregarCarpetaComponent
       }
     ]
   },
   {
     path: 'documentos',
     component: ListaDocumentosComponent
+  },
+  {
+    path: '**', redirectTo: 'carpetas', pathMatch: 'full'
   }
 ];
 

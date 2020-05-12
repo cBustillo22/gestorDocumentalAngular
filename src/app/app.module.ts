@@ -9,6 +9,10 @@ import { ListaCarpetasComponent } from './components/lista-carpetas/lista-carpet
 import { HttpClientModule } from '@angular/common/http';
 import { ListaDocumentosComponent } from './components/lista-documentos/lista-documentos.component';
 import { InfoCarpetaComponent } from './components/lista-carpetas/info-carpeta/info-carpeta.component';
+import {ServicioCarpetaService} from './services/servicio-carpeta.service';
+import { AgregarCarpetaComponent } from './components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
+import {DatePipe} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,14 +21,20 @@ import { InfoCarpetaComponent } from './components/lista-carpetas/info-carpeta/i
     HeaderComponent,
     ListaCarpetasComponent,
     ListaDocumentosComponent,
-    InfoCarpetaComponent
+    InfoCarpetaComponent,
+    AgregarCarpetaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ServicioCarpetaService,
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

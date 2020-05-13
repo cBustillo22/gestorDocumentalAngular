@@ -1,0 +1,75 @@
+*{margin: 0;padding: 0;}
+body{
+  background: #D6D6D6;
+}
+
+header{
+  width: 100%;
+  overflow: hidden;
+  background: #305AF0;
+}
+
+.p-3{
+  margin: auto;
+  padding: 1em;
+}
+.wrapper{
+  width: 90%;
+  max-width: 1920px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.logo{
+  color: white;
+  font-size: 48px;
+  line-height: 150px;
+  float: left;
+}
+
+header nav{
+  float: right;
+  line-height: 150px;
+}
+header nav a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 30px;
+}
+
+header nav a:hover{
+  background: #D6D6D6;
+  border-radius: 40px;
+}
+.container{
+  background: white;
+  width: 70%;
+  margin: auto;
+}
+
+.container h3{
+  text-align: center;
+}
+
+.options-versions{
+  font-size: 20px;
+}
+
+#filter{
+  float: left;
+}
+
+#add-version{
+  float: right;
+}
+
+.container-version{
+  width: 90%;
+  margin: auto;
+}
+.versions{
+  margin-top: 1em;
+}

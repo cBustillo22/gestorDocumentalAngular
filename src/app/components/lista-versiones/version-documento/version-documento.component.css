@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;}
+
+ul{
+  list-style: none;
+  padding-left: 0px;
+}
+.media{
+  background: #ECE9E9;
+}
+
+.media-body{
+  margin: auto;
+}

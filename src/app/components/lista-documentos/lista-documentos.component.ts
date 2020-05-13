@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Documento} from '../../objects/documento';
+import {ServicioDocumentoService} from '../../services/servicio-documento.service';
 
 @Component({
   selector: 'app-lista-documentos',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaDocumentosComponent implements OnInit {
 
-  constructor() { }
+  documentos: Documento[] = [];
+
+  constructor(private servicioDocumento: ServicioDocumentoService) { }
 
   ngOnInit(): void {
+    this.servicioDocumento.getAll()
+      .subscribe(
+        data => {
+          this.documentos = data;
+        }
+      );
   }
-
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Version } from '../../objects/version';
+import {ServicioVersionService} from '../../services/servicio-version.service';
 
 @Component({
   selector: 'app-lista-versiones',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaVersionesComponent implements OnInit {
 
-  constructor() { }
+  versiones: Version[] = [];
+
+  constructor(private servicioVersion: ServicioVersionService) { }
 
   ngOnInit(): void {
+    this.servicioVersion.getAll()
+      .subscribe(
+        data => {
+          this.versiones = data;
+        }
+      );
   }
 
 }

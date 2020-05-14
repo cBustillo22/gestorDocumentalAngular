@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Carpeta} from '../objects/carpeta';
 import {logger} from 'codelyzer/util/logger';
+import {Documento} from '../objects/documento';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +30,9 @@ export class ServicioCarpetaService {
     return res;
   }
 
-
-
-
+  getDocumentos(carpeta: string) {
+    return this.httpClient.get<Documento[]>(this.url + '/' + carpeta + '/documentos');
+  }
 }
 
 

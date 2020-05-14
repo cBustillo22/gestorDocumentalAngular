@@ -7,11 +7,14 @@ import {Documento} from '../objects/documento';
 })
 export class ServicioDocumentoService {
 
-  url = 'http://localhost:8080/api/v1/carpeta';
+  url = 'http://localhost:8080/api/v1/documento';
 
   constructor(private httpClient: HttpClient) { }
 
   getAll(){
     return this.httpClient.get<Documento[]>(this.url);
   }
+
+
+
 }

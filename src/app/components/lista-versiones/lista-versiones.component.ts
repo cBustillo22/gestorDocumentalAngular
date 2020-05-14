@@ -14,7 +14,7 @@ export class ListaVersionesComponent implements OnInit {
   constructor(private servicioVersion: ServicioVersionService) { }
 
   ngOnInit(): void {
-    this.servicioVersion.getAll()
+    this.servicioVersion.getAll('Facturas')
       .subscribe(
         data => {
           this.versiones = data;

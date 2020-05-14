@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;}
+
+.folder-navigator{
+  float: left;
+}
+
+.folder-list ul{
+  list-style: none;
+}
+
+.media-body{
+  background: #D6D6D6;
+}

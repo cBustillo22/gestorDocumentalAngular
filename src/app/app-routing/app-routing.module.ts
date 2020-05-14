@@ -32,7 +32,6 @@ const routes: Routes = [
   {
     path: '**', redirectTo: 'carpetas', pathMatch: 'full'
   },
-  { path: 'documentos', component: ListaDocumentosComponent },
   { path: 'versiones', component: ListaVersionesComponent }
 ];
 

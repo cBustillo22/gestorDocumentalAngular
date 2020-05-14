@@ -13,13 +13,11 @@ export class ListaCarpetasComponent implements OnInit {
 
   constructor(
     private servicioCarpeta: ServicioCarpetaService
-  ) {
+  ) {  }
+
+  ngOnInit(): void {
     this.servicioCarpeta.getCarpetas().subscribe((aux) => {
       this.carpetas = aux;
     });
   }
-
-  ngOnInit(): void {
-  }
-
 }

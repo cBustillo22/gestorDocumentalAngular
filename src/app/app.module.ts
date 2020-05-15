@@ -15,6 +15,7 @@ import {DatePipe} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListaVersionesComponent } from './components/lista-versiones/lista-versiones.component';
 import { VersionDocumentoComponent } from './components/lista-versiones/version-documento/version-documento.component';
+import { DocumentosComponent } from './components/lista-documentos/documentos/documentos.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { VersionDocumentoComponent } from './components/lista-versiones/version-
     InfoCarpetaComponent,
     AgregarCarpetaComponent,
     ListaVersionesComponent,
-    VersionDocumentoComponent
+    VersionDocumentoComponent,
+    DocumentosComponent
   ],
   imports: [
     BrowserModule,

@@ -3,14 +3,18 @@
     <div class="card p-3" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">Carpetas</h5>
+
         <div class="folder-list p-3">
-          <ul>
+          <ul *ngFor="let carpeta of carpetas">
             <li>
-              <a href="#" class="card-link"> </a>
+              <a [routerLink]="['carpetas', carpeta.nombre, 'documentos']" class="card-link">
+                {{carpeta.nombre}}
+              </a>
             </li>
           </ul>
         </div>
-        <a href="#" class="card-link">Agregar carpeta
+
+        <a class="card-link">Agregar carpeta
           <svg class="bi bi-folder-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
@@ -27,6 +31,8 @@
     </div>
   </div>
   <div class="media-body">
+
+    <app-documentos></app-documentos>
 
   </div>
 </div>

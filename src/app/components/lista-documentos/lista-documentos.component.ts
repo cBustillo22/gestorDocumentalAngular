@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Documento} from '../../objects/documento';
 import {ServicioDocumentoService} from '../../services/servicio-documento.service';
 import {ServicioCarpetaService} from '../../services/servicio-carpeta.service';
+import {Carpeta} from '../../objects/carpeta';
 
 @Component({
   selector: 'app-lista-documentos',
@@ -10,27 +11,16 @@ import {ServicioCarpetaService} from '../../services/servicio-carpeta.service';
 })
 export class ListaDocumentosComponent implements OnInit {
 
-  documentos: Documento[] = [];
-  docsCarpeta: Documento[] = [];
+  carpetas: Carpeta[] = [];
 
-  constructor(private servicioDocumento: ServicioDocumentoService,
-              private servicioCarpeta: ServicioCarpetaService
+  constructor(private servicioCarpeta: ServicioCarpetaService,
   ) { }
 
   ngOnInit(): void {
-    this.servicioDocumento.getAll()
+    this.servicioCarpeta.getCarpetas()
       .subscribe(
         data => {
-          this.documentos = data;
-        }
-      );
-  }
-
-  getDocumentosCarpeta(nombreCarpeta: string){
-    this.servicioCarpeta.getDocumentos(nombreCarpeta)
-      .subscribe(
-        data => {
-          this.docsCarpeta = data;
+          this.carpetas = data;
         }
       );
   }

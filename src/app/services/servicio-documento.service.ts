@@ -14,7 +14,4 @@ export class ServicioDocumentoService {
   getAll(){
     return this.httpClient.get<Documento[]>(this.url);
   }
-
-
-
 }

@@ -1,0 +1,14 @@
+.carpeta{
+  margin: 10px;
+  font-family: "Verdana";
+  background: #ECE9E9;
+}
+
+.carpeta .imagen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  width: 40%;
+  height: 40%;
+}

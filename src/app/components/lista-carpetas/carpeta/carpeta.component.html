@@ -1,0 +1,12 @@
+<div class="card carpeta" style="width: 16.5rem;">
+  <img src="assets/images/folder.png" class="card-img-top imagen" alt="...">
+  <div class="card-body text-center" >
+    <h5 class="card-title ">
+      <a routerLink="/documentos" style="color: black">
+        {{carpeta.nombre}}
+      </a>
+    </h5>
+    <p class="card-text">Carpeta de gestor de Documentos</p>
+    <a href="#" [routerLink]="['/carpetas/infoCarpeta', carpeta.nombre]" class="btn btn-primary">Información</a>
+  </div>
+</div>

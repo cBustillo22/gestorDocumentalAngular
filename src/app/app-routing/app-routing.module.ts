@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ListaCarpetasComponent} from '../components/lista-carpetas/lista-carpetas.component';
-import {HeaderComponent} from '../components/header/header.component';
 import {ListaDocumentosComponent} from '../components/lista-documentos/lista-documentos.component';
 import {InfoCarpetaComponent} from '../components/lista-carpetas/info-carpeta/info-carpeta.component';
 import {AgregarCarpetaComponent} from '../components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
+import {ListaVersionesComponent} from '../components/lista-versiones/lista-versiones.component';
+import {DocumentosComponent} from '../components/lista-documentos/documentos/documentos.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   {
     path: 'carpetas',
     component: ListaCarpetasComponent,
-    children:[
+    children: [
       {
         path: 'infoCarpeta/:nombre',
         component: InfoCarpetaComponent
@@ -21,16 +22,21 @@ const routes: Routes = [
       {
         path: 'agregarCarpeta',
         component: AgregarCarpetaComponent
+      },
+      {
+        path: ':nombreCarpeta/documentos',
+        component: DocumentosComponent
       }
     ]
   },
   {
     path: 'documentos',
-    component: ListaDocumentosComponent
+    component: ListaDocumentosComponent,
   },
   {
     path: '**', redirectTo: 'carpetas', pathMatch: 'full'
-  }
+  },
+  { path: 'versiones', component: ListaVersionesComponent }
 ];
 
 @NgModule({

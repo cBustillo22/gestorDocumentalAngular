@@ -1,4 +1,8 @@
 *{margin: 0;padding: 0;}
+body{
+  background: #D6D6D6;
+}
+
 header{
   width: 100%;
   overflow: hidden;
@@ -16,8 +20,7 @@ header{
   overflow: hidden;
 }
 
-.logo a {
-  text-decoration: none;
+.logo{
   color: white;
   font-size: 48px;
   line-height: 150px;
@@ -40,4 +43,33 @@ header nav a{
 header nav a:hover{
   background: #D6D6D6;
   border-radius: 40px;
+}
+.container{
+  background: white;
+  width: 70%;
+  margin: auto;
+}
+
+.container h3{
+  text-align: center;
+}
+
+.options-versions{
+  font-size: 20px;
+}
+
+#filter{
+  float: left;
+}
+
+#add-version{
+  float: right;
+}
+
+.container-version{
+  width: 90%;
+  margin: auto;
+}
+.versions{
+  margin-top: 1em;
 }

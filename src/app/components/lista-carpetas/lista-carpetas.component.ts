@@ -14,6 +14,7 @@ export class ListaCarpetasComponent implements OnInit {
 
   constructor(
     private servicioCarpeta: ServicioCarpetaService
+
   ) {
     this.refreshFiles();
   }
@@ -27,5 +28,4 @@ export class ListaCarpetasComponent implements OnInit {
       this.carpetas = aux;
     });
   }
-
 }

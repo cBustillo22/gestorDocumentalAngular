@@ -1,31 +1,12 @@
 <div class="container tabla">
-  <button routerLink="agregarCarpeta" type="button" class="btn btn-primary">Añadir Carpeta</button>
+  <button routerLink="agregarCarpeta" type="button" class="btn btn-primary boton">Añadir Carpeta</button>
   <section class="row tabla">
     <div class="col-md-9">
-      <table class="table table-hover">
-        <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Carpeta</th>
-          <th scope="col">Info</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let carpeta of (carpetas)">
-          <th scope="row">{{carpetas.indexOf(carpeta)+1}}</th>
-          <td>
-            <a routerLink="/documentos" style="color: black">
-              {{carpeta.nombre}}
-            </a>
-          </td>
-          <td>
-            <a [routerLink]="['/carpetas/infoCarpeta', carpeta.nombre]">Ver información...</a>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="row">
+          <app-carpeta *ngFor="let carpeta of (carpetas)" [carpeta]="carpeta"></app-carpeta>
+      </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" >
       <router-outlet></router-outlet>
     </div>
   </section>

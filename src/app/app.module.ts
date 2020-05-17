@@ -13,6 +13,7 @@ import {ServicioCarpetaService} from './services/servicio-carpeta.service';
 import { AgregarCarpetaComponent } from './components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
 import {DatePipe} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CarpetaComponent } from './components/lista-carpetas/carpeta/carpeta.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ListaCarpetasComponent,
     ListaDocumentosComponent,
     InfoCarpetaComponent,
-    AgregarCarpetaComponent
+    AgregarCarpetaComponent,
+    CarpetaComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Carpeta} from '../../objects/carpeta';
 import {ServicioCarpetaService} from '../../services/servicio-carpeta.service';
 
+
 @Component({
   selector: 'app-lista-carpetas',
   templateUrl: './lista-carpetas.component.html',
@@ -14,12 +15,17 @@ export class ListaCarpetasComponent implements OnInit {
   constructor(
     private servicioCarpeta: ServicioCarpetaService
   ) {
-    this.servicioCarpeta.getCarpetas().subscribe((aux) => {
-      this.carpetas = aux;
-    });
+    this.refreshFiles();
   }
 
   ngOnInit(): void {
+    this.refreshFiles();
+  }
+
+  refreshFiles(){
+    this.servicioCarpeta.getCarpetas().subscribe((aux) => {
+      this.carpetas = aux;
+    });
   }
 
 }

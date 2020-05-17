@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ServicioCarpetaService} from '../../../services/servicio-carpeta.service';
 import {Form, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Carpeta} from '../../../objects/carpeta';
+import {ListaCarpetasComponent} from '../lista-carpetas.component';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-agregar-carpeta',
   templateUrl: './agregar-carpeta.component.html',
@@ -14,11 +17,12 @@ export class AgregarCarpetaComponent implements OnInit {
 
   constructor(
     private servicioCarpeta: ServicioCarpetaService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private compListarCarpetas: ListaCarpetasComponent
   ) {
     this.userForm = this.formBuilder.group({
       nombre: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      fechaCreacion: '2020-05-09T00:00:55.621+0000' //new Date()
+      fechaCreacion: new Date()
     });
   }
 
@@ -27,11 +31,26 @@ export class AgregarCarpetaComponent implements OnInit {
 
   onSubmit(){
     this.carpeta = this.userForm.value;
-    this.añadirCarpeta(this.carpeta);
+    const object = this.añadirCarpeta(this.carpeta);
+    if (object){
+      Swal.fire({
+        title: '<strong>Carpeta Insertada</strong>',
+        icon: 'success'
+      });
+      this.compListarCarpetas.refreshFiles();
+    } else {
+      Swal.fire({
+        title: '<strong>Ocurrio un problema</strong>',
+        icon: 'error'
+      });
+    }
   }
 
   añadirCarpeta(carpeta: Carpeta){
-    this.servicioCarpeta.añadirCarpeta(carpeta);
+    return this.servicioCarpeta.añadirCarpeta(carpeta)
+      .subscribe(data => {
+        console.log(data);
+      });
   }
 
 }

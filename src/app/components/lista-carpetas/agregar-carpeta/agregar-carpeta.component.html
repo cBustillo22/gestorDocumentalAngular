@@ -1,6 +1,6 @@
 <div class="container agregar">
   <img src="assets/images/folder.png" alt="Carpeta" class="rounded-0 imagen">
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" (submit)="onSubmit()">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="nombreCarpeta">Nombre: </label>
       <input type="text" class="form-control" id="nombreCarpeta" formControlName="nombre">

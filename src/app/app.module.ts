@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListaVersionesComponent } from './components/lista-versiones/lista-versiones.component';
 import { VersionDocumentoComponent } from './components/lista-versiones/version-documento/version-documento.component';
 import { DocumentosComponent } from './components/lista-documentos/documentos/documentos.component';
+import { CarpetaComponent } from './components/lista-carpetas/carpeta/carpeta.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DocumentosComponent } from './components/lista-documentos/documentos/do
     AgregarCarpetaComponent,
     ListaVersionesComponent,
     VersionDocumentoComponent,
-    DocumentosComponent
+    DocumentosComponent,
+    CarpetaComponent
   ],
   imports: [
     BrowserModule,

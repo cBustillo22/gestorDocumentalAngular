@@ -22,16 +22,12 @@ const routes: Routes = [
       {
         path: 'agregarCarpeta',
         component: AgregarCarpetaComponent
-      },
-      {
-        path: ':nombreCarpeta/documentos',
-        component: DocumentosComponent
       }
     ]
   },
   {
-    path: 'documentos',
-    component: ListaDocumentosComponent,
+    path: 'documentos/:nombreCarpeta',
+    component: ListaDocumentosComponent
   },
   {
     path: '**', redirectTo: 'carpetas', pathMatch: 'full'

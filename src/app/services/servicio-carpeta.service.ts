@@ -31,6 +31,7 @@ export class ServicioCarpetaService {
   }
 
   getDocumentos(carpeta: string) {
+    console.log(this.url + '/' + carpeta + '/documentos');
     return this.httpClient.get<Documento[]>(this.url + '/' + carpeta + '/documentos');
   }
 }

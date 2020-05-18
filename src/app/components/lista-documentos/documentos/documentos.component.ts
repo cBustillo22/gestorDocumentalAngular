@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Documento} from '../../../objects/documento';
 import {ServicioDocumentoService} from '../../../services/servicio-documento.service';
 import {ActivatedRoute} from '@angular/router';
@@ -11,24 +11,11 @@ import {ServicioCarpetaService} from '../../../services/servicio-carpeta.service
 })
 export class DocumentosComponent implements OnInit {
 
-  documentos: Documento[] = [];
-  nombreCarpeta: string;
+  @Input() documento: Documento;
 
-  constructor(private servicioDocumento: ServicioDocumentoService,
-              private servicioCarpeta: ServicioCarpetaService,
-              private ruta: ActivatedRoute
-  ) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.ruta.params.subscribe(data => {
-      this.nombreCarpeta = data.nombre;
-    });
-
-    this.servicioDocumento.getAll()
-      .subscribe(
-        data => {
-          this.documentos = data;
-        }
-      );
   }
 }

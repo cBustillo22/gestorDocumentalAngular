@@ -7,7 +7,7 @@
         <div class="folder-list p-3">
           <ul *ngFor="let carpeta of carpetas">
             <li>
-              <a [routerLink]="['carpetas', carpeta.nombre, 'documentos']" class="card-link">
+              <a [routerLink]="['/documentos', carpeta.nombre]" (click)="getDocumentosCarpeta()" class="card-link">
                 {{carpeta.nombre}}
               </a>
             </li>
@@ -30,9 +30,8 @@
       </div>
     </div>
   </div>
+
   <div class="media-body">
-
-    <app-documentos></app-documentos>
-
+    <app-documentos *ngFor="let documento of (documentosCarpeta)" [documento] = "documento"></app-documentos>
   </div>
 </div>

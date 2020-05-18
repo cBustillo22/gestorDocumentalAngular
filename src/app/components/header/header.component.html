@@ -1,22 +1,106 @@
-<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="#">Gestor Documental</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="carpetas">Carpetas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Administracion</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<header class="site-header one-page" id="header">
+    <nav class="navbar navbar-expand-lg transparent-bg dark-gradient static-nav p-0">
+        <div class="container z-index-17">
+            <a class="navbar-brand" href="index.html">
+                <h2 class="titleLog">Ge<strong> Docs</strong></h2>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto" id="menu">
+                    <li class="nav-item">
+                        <a class="nav-link current" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carpetas">Carpetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#administracion">Administración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex d-lg-none animated fadeIn">
+                <div class="para-btn para-up mr-3 disabled">
+                    <i class="far fa-caret-square-up"></i>
+                </div>
+                <div class="para-btn para-down">
+                    <i class="far fa-caret-square-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </header>
+  <div fullpage id="fullpage2" [options]="config" (ref)="getRef($event)">
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="section parallax-header">
+        <h1>Bienvenidos a GeDocs  Su gestor documental</h1>
+
+
+        <div class="overlay overlay-dark opacity-6 z-index-0"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="item-titles center-block whitecolor text-center min-vh-100">                    
+                    
+    <svg class="svg1" xmlns="http://www.w3.org/2000/svg"  viewBox="-260 50 1020 1220">
+      <defs><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-dae1e7-1-00909e-1-s-0"><stop offset="0%" style="stop-color:#dae1e7"/><stop offset="100%" style="stop-color:#00909e"/></linearGradient><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-003d7c-1-0066cc-1-s-0"><stop offset="0%" style="stop-color:#003D7C"/><stop offset="100%" style="stop-color:#0066CC"/></linearGradient></defs><g transform="scale(.4)">
+   
+    <rect x="410" y="410" width="690" height="640" rx="96" ry="96" fill="url(#mx-gradient-dae1e7-1-00909e-1-s-0)" stroke="#000000" pointer-events="all"/>
+    <path d="M 782.69 983.56 L 650.58 983.49 C 638.49 983.49 620.01 972.76 620.01 950.61 L 620 670 L 789.7 670.07 L 848.9 729.21 L 848.8 904.15 L 790.45 941.01 Z" fill="url(#mx-gradient-003d7c-1-0066cc-1-s-0)" stroke="none" pointer-events="all"/>
+    <path d="M 849.1 1040 C 808.54 1040 776.04 1007.52 776.04 965.85 C 776.04 928.92 805.2 893.93 847.61 893.93 C 887.05 893.93 920 926.05 920 967.16 C 920 1008.89 885.48 1040 849.1 1040 Z" fill="#f7941d" stroke="none" pointer-events="all"/>
+    <path d="M 843.64 1007.17 L 894.09 955.41 C 899.16 951.23 897.4 944.75 894.09 940.89 L 883.65 929.78 L 843.61 970.25 L 811.71 938.67 L 800.66 949.51 C 796.76 953.66 797.66 959.73 800.58 963.09 Z M 807.23 893.8 L 807.11 873.6 L 658.08 873.58 L 658.02 893.85 Z M 807.35 853.91 L 807.18 833.1 L 658.02 833.3 L 658.07 853.84 Z M 807.33 813.34 L 807.24 793.11 L 658.02 793.02 L 657.99 813.67 Z M 826.56 731.47 L 787.42 688.4 L 787.3 731.59 Z" fill="#ffffff" stroke="none" pointer-events="all"/>
+    <rect x="560" y="350" width="390" height="200" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)">
+      
+      <switch><text x="755" y="554" fill="#000000" font-family="Helvetica" font-size="50px" text-anchor="middle">Gestión de documentos</text></switch></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg>
+      <img src="assets/images/somo.png" class="img img1" alt="Responsive image" />
+    
+    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="section parallax-header"><h1>Section 2</h1>
+
+    <div class="overlay overlay-dark para-opacity z-index-0"></div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <div class="d-none d-lg-block animated fadeIn fixed-para-btn">
+        <div class="para-btn para-up mb-2 disabled">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" enable-background="new 0 0 129 129" fill="#111" class="rotate-180">
+                <g>
+                    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                </g>
+            </svg>
+        </div>
+        <div class="para-btn para-down">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" enable-background="new 0 0 129 129" fill="#111" >
+                <g>
+                    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                </g>
+            </svg>
+        </div>
+        </div>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////-->
+</div>
+

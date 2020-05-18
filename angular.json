@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gestorDocumentalAngular"
+    }
+  },
+  "defaultProject": "gestorDocumentalAngular",
+  "cli": {
+    "analytics": "0b2516af-3ffd-43ac-816c-14a88fa9f42a"
+  }
 }

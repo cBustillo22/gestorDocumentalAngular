@@ -1,11 +1,14 @@
 .agregar{
   margin-top: 10px;
-  text-align: center;
+  text-align: inherit;
+  font-size: 1em;
 }
 
 .agregar .imagen{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 30%;
+ 
 }
+

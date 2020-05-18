@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+
+
+import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,7 +15,10 @@ import {ServicioCarpetaService} from './services/servicio-carpeta.service';
 import { AgregarCarpetaComponent } from './components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
 import {DatePipe} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InicioComponent } from './components/inicio/inicio.component';
 
+
+import { AngularFullpageModule } from '@fullpage/angular-fullpage'
 
 @NgModule({
   declarations: [
@@ -22,14 +27,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ListaCarpetasComponent,
     ListaDocumentosComponent,
     InfoCarpetaComponent,
-    AgregarCarpetaComponent
+    AgregarCarpetaComponent,
+    InicioComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFullpageModule
   ],
   providers: [
     ServicioCarpetaService,

@@ -22,7 +22,7 @@
     </div>
 
     <div class="versions">
-        <app-version-documento></app-version-documento>
+        <app-version-documento *ngFor="let version of (versionesDocumento)" [version]="version"></app-version-documento>
     </div>
   </div>
 </div>

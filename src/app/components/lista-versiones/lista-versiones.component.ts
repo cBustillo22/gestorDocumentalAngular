@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Version } from '../../objects/version';
+import { VersionDoc } from '../../objects/versionDoc';
 import {ServicioVersionService} from '../../services/servicio-version.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ListaVersionesComponent implements OnInit {
 
-  versiones: Version[] = [];
+  versionesDocumento: VersionDoc[] = [];
   nombreDocumento: string;
 
   constructor(private servicioVersion: ServicioVersionService,
@@ -29,7 +29,7 @@ export class ListaVersionesComponent implements OnInit {
     this.servicioVersion.getVersionesDocumento(this.nombreDocumento)
       .subscribe(
         data => {
-          this.versiones = data;
+          this.versionesDocumento = data;
         }
       );
   }

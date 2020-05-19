@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Documento} from '../../objects/documento';
-import {ServicioDocumentoService} from '../../services/servicio-documento.service';
 import {ServicioCarpetaService} from '../../services/servicio-carpeta.service';
 import {Carpeta} from '../../objects/carpeta';
-import {DocumentosComponent} from './documentos/documentos.component';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({

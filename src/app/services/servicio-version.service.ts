@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Version} from '../objects/version';
+import {VersionDoc} from '../objects/versionDoc';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class ServicioVersionService {
   constructor(private httpClient: HttpClient) { }
 
   getVersionesDocumento(documento: string){
-    return this.httpClient.get<Version[]>(this.url + '/' + documento);
+    return this.httpClient.get<VersionDoc[]>(this.url + '/' + documento);
   }
 }

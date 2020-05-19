@@ -11,9 +11,7 @@ export class ServicioVersionService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAll(documento: string){
+  getVersionesDocumento(documento: string){
     return this.httpClient.get<Version[]>(this.url + '/' + documento);
   }
-
-
 }

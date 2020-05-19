@@ -5,6 +5,6 @@ export interface Documento {
   tamanio: number;
   tipo: string;
   descripcion: string;
-  fechaCreación: Date;
+  fechaCreacion: Date;
   estado: string;
 }

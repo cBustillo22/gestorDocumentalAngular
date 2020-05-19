@@ -5,7 +5,6 @@ import {ListaDocumentosComponent} from '../components/lista-documentos/lista-doc
 import {InfoCarpetaComponent} from '../components/lista-carpetas/info-carpeta/info-carpeta.component';
 import {AgregarCarpetaComponent} from '../components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
 import {ListaVersionesComponent} from '../components/lista-versiones/lista-versiones.component';
-import {DocumentosComponent} from '../components/lista-documentos/documentos/documentos.component';
 
 const routes: Routes = [
   {
@@ -30,9 +29,12 @@ const routes: Routes = [
     component: ListaDocumentosComponent
   },
   {
-    path: '**', redirectTo: 'carpetas', pathMatch: 'full'
+    path: 'versiones/:nombreDocumento',
+    component: ListaVersionesComponent
   },
-  { path: 'versiones', component: ListaVersionesComponent }
+  {
+    path: '**', redirectTo: 'carpetas', pathMatch: 'full'
+  }
 ];
 
 @NgModule({

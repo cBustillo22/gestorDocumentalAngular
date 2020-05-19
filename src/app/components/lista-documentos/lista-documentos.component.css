@@ -11,3 +11,7 @@
 .media-body{
   background: #D6D6D6;
 }
+
+.media-body h4{
+  text-align: center;
+}

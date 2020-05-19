@@ -14,5 +14,4 @@ export class CarpetaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

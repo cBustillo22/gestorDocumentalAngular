@@ -14,10 +14,13 @@
           </svg>
 
           <div class="media-body p-3">
-            <p>{{documento.nombre}}</p>
+            <a [routerLink]="['/versiones', documento.nombre]" >
+              {{documento.nombre}}
+            </a>
           </div>
-          <div>
-            <p>{{documento.carpetaRaiz}}</p>
+
+          <div style="margin: auto">
+            <p>{{documento.fechaCreacion}}</p>
           </div>
         </div>
       </div>

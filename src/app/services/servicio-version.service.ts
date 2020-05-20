@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Version} from '../objects/version';
+import {Documento} from '../objects/documento';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,11 @@ export class ServicioVersionService {
 
   getAll(documento: string){
     return this.httpClient.get<Version[]>(this.url + '/' + documento);
+  }
+
+  addVersion(version: Version): Observable<any> {
+    const res = this.httpClient.post(this.url, version);
+    return res;
   }
 
 

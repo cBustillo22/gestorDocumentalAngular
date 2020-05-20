@@ -37,16 +37,17 @@ export class AgregarCarpetaComponent implements OnInit {
         title: '<strong>Carpeta Insertada</strong>',
         icon: 'success'
       });
-      this.compListarCarpetas.refreshFiles();
     } else {
       Swal.fire({
         title: '<strong>Ocurrio un problema</strong>',
         icon: 'error'
       });
     }
+    this.compListarCarpetas.refreshFiles();
   }
 
   añadirCarpeta(carpeta: Carpeta){
+    debugger;
     return this.servicioCarpeta.añadirCarpeta(carpeta)
       .subscribe(data => {
         console.log(data);

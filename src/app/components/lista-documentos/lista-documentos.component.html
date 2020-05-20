@@ -32,6 +32,7 @@
   </div>
 
   <div class="media-body">
+    <button type="button" class="btn btn-primary boton" (click)="addDocumento()">Añadir Documento</button>
     <app-documentos *ngFor="let documento of (documentosCarpeta)" [documento] = "documento"></app-documentos>
   </div>
 </div>

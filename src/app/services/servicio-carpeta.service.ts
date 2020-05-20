@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Carpeta} from '../objects/carpeta';
 import {logger} from 'codelyzer/util/logger';
-import {Documento} from '../objects/documento';
+import {Documento} from 'src/app/objects/documento';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -25,6 +25,7 @@ export class ServicioCarpetaService {
   }
 
   añadirCarpeta(carpeta: Carpeta): Observable<any> {
+
     console.log(JSON.stringify(carpeta));
     const res = this.httpClient.post(this.url, carpeta);
     return res;

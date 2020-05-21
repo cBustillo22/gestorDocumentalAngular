@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VersionDoc } from '../../objects/versionDoc';
+import { Version } from '../../objects/version';
 import {ServicioVersionService} from '../../services/servicio-version.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ListaVersionesComponent implements OnInit {
 
-  versionesDocumento: VersionDoc[] = [];
+  versionesDocumento: Version[] = [];
   nombreDocumento: string;
 
   constructor(private servicioVersion: ServicioVersionService,

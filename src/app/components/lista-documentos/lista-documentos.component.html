@@ -31,8 +31,10 @@
     </div>
   </div>
 
-  <div class="media-body p-3">
-    <h4>Documentos: {{nombreCarpeta}}</h4>
+  <h4>Documentos: {{nombreCarpeta}}</h4>
+  <div class="media-body">
+    <button type="button" class="btn btn-primary boton" (click)="addDocumento()">Añadir Documento</button>
+
     <app-documentos *ngFor="let documento of (documentosCarpeta)" [documento] = "documento"></app-documentos>
   </div>
 </div>

@@ -1,4 +1,4 @@
-export interface VersionDoc {
+export interface Version {
   uuid: string;
   version: number;
   base64File: string;

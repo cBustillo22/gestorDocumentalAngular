@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {VersionDoc} from '../../../objects/versionDoc';
+import {Version} from '../../../objects/version';
 
 @Component({
   selector: 'app-version-documento',
@@ -8,7 +8,7 @@ import {VersionDoc} from '../../../objects/versionDoc';
 })
 export class VersionDocumentoComponent implements OnInit {
 
-  @Input() version: VersionDoc;
+  @Input() version: Version;
 
   constructor() { }
 

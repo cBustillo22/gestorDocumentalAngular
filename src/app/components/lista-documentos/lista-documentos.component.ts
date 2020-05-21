@@ -99,6 +99,8 @@ export class ListaDocumentosComponent implements OnInit {
             esVersionMayor: null,
             documentoRaiz: formValues[0].nombre
           };
+          debugger;
+          console.log(e.target.result);
           this.añadirDocumento(documento[0]);
           this.getDocumentosCarpeta();
           console.log(version.documentoRaiz);
@@ -153,4 +155,6 @@ export class ListaDocumentosComponent implements OnInit {
   getB64(str) {
     return str.split(';base64,')[1];
   }
+
+
 }

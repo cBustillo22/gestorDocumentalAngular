@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;}
+
+body{
+  background: #D6D6D6;
+}
+
+.container{
+  background: white;
+  width: 70%;
+  margin: auto;
+}
+
+.alineamiento{
+  margin: auto;
+}
+
+.visualizacion{
+  float: right;
+}

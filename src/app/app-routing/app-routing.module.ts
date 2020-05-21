@@ -5,6 +5,7 @@ import {ListaDocumentosComponent} from '../components/lista-documentos/lista-doc
 import {InfoCarpetaComponent} from '../components/lista-carpetas/info-carpeta/info-carpeta.component';
 import {AgregarCarpetaComponent} from '../components/lista-carpetas/agregar-carpeta/agregar-carpeta.component';
 import {ListaVersionesComponent} from '../components/lista-versiones/lista-versiones.component';
+import {InfoVersionComponent} from '../components/lista-versiones/info-version/info-version.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'versiones/:nombreDocumento',
     component: ListaVersionesComponent
+  },
+  {
+    path: 'infoVersion/:version',
+    component: InfoVersionComponent
   },
   {
     path: '**', redirectTo: 'carpetas', pathMatch: 'full'

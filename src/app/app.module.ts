@@ -17,6 +17,7 @@ import { ListaVersionesComponent } from './components/lista-versiones/lista-vers
 import { VersionDocumentoComponent } from './components/lista-versiones/version-documento/version-documento.component';
 import { DocumentosComponent } from './components/lista-documentos/documentos/documentos.component';
 import { CarpetaComponent } from './components/lista-carpetas/carpeta/carpeta.component';
+import { InfoVersionComponent } from './components/lista-versiones/info-version/info-version.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CarpetaComponent } from './components/lista-carpetas/carpeta/carpeta.co
     ListaVersionesComponent,
     VersionDocumentoComponent,
     DocumentosComponent,
-    CarpetaComponent
+    CarpetaComponent,
+    InfoVersionComponent
   ],
   imports: [
     BrowserModule,

@@ -11,3 +11,8 @@ ul{
 .media-body{
   margin: auto;
 }
+
+.options-version{
+  margin: auto;
+  float: right;
+}

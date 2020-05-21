@@ -1,3 +1,4 @@
+<body>
 <div class="container">
   <div class="container-version p-3">
     <h3>{{nombreDocumento}}</h3>
@@ -22,7 +23,9 @@
     </div>
 
     <div class="versions">
-        <app-version-documento *ngFor="let version of (versionesDocumento)" [version]="version"></app-version-documento>
+      <app-version-documento *ngFor="let version of (versionesDocumento)" [version]="version"></app-version-documento>
     </div>
   </div>
 </div>
+</body>
+

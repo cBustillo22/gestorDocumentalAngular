@@ -14,7 +14,7 @@
           </ul>
         </div>
 
-        <a class="card-link">Agregar carpeta
+        <a routerLink="/carpetas/agregarCarpeta" class="card-link">Agregar carpeta
           <svg class="bi bi-folder-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
@@ -31,10 +31,13 @@
     </div>
   </div>
 
-  <h4>Documentos: {{nombreCarpeta}}</h4>
   <div class="media-body">
-    <button type="button" class="btn btn-primary boton" (click)="addDocumento()">Añadir Documento</button>
-
+    <h4 class="p-3">Documentos: {{nombreCarpeta}}</h4>
+    <div style="width: 100%; margin-bottom: 47px;">
+      <button type="button" class="btn btn-primary boton" style="float: right" (click)="addDocumento()">
+        Añadir Documento
+      </button>
+    </div>
     <app-documentos *ngFor="let documento of (documentosCarpeta)" [documento] = "documento"></app-documentos>
   </div>
 </div>

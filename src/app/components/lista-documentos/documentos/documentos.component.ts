@@ -1,9 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Documento} from '../../../objects/documento';
-import {ServicioDocumentoService} from '../../../services/servicio-documento.service';
-import {ActivatedRoute} from '@angular/router';
-import {ServicioCarpetaService} from '../../../services/servicio-carpeta.service';
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 import {ServicioVersionService} from '../../../services/servicio-version.service';
 import {Version} from '../../../objects/version';
 

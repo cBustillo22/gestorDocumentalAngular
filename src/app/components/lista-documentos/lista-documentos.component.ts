@@ -155,6 +155,4 @@ export class ListaDocumentosComponent implements OnInit {
   getB64(str) {
     return str.split(';base64,')[1];
   }
-
-
 }

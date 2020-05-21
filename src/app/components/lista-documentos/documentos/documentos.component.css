@@ -11,3 +11,11 @@ ul{
 .media-body{
   margin: auto;
 }
+.options p {
+  text-align: right;
+}
+
+.boton{
+  float: right;
+  padding: 5px;
+}

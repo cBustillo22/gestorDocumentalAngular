@@ -34,7 +34,7 @@ const routes: Routes = [
     component: ListaVersionesComponent
   },
   {
-    path: 'infoVersion/:version',
+    path: 'infoVersion/:nombreDocumento/:numeroVersion',
     component: InfoVersionComponent
   },
   {

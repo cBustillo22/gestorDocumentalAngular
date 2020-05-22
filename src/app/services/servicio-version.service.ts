@@ -22,6 +22,10 @@ export class ServicioVersionService {
     return res;
   }
 
+  getVersion(nombreDocumento: string, numeroVerion: number){
+    return this.httpClient.get<Version>(this.url + '/v/' + nombreDocumento + '/' + numeroVerion);
+  }
+
   getB64VersionMayor(nombreDocumento: string) {
     const res = this.httpClient.get<Version>(this.url + '/' + nombreDocumento + '/versionMayor');
     return res;

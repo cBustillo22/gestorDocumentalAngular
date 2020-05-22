@@ -11,7 +11,7 @@
     </svg>
 
     <div class="media-body">
-      <a [routerLink]="['/infoVersion', version.version]">Version número: {{version.version}}</a>
+      <a [routerLink]="['/infoVersion', version.documentoRaiz, version.version]">Version número: {{version.version}}</a>
       <p>Documento Raiz: {{version.documentoRaiz}}</p>
       <p>Es verion Mayor: {{version.esVersionMayor}}</p>
     </div>

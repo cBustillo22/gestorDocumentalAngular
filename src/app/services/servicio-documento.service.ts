@@ -20,4 +20,8 @@ export class ServicioDocumentoService {
     const res = this.httpClient.post(this.url, documento);
     return res;
   }
+
+  getDocumento(nombreDocumento: string){
+    return this.httpClient.get<Documento>(this.url + '/' + nombreDocumento);
+  }
 }

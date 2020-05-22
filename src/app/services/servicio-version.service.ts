@@ -22,7 +22,8 @@ export class ServicioVersionService {
     return res;
   }
 
-  getVersion(nombreDocumento: string, numeroVerion: number){
+  getVersion(nombreDocumento: string, numeroVerion: number): Observable<Version>{
+    console.log(this.httpClient.get<Version>(this.url + '/v/' + nombreDocumento + '/' + numeroVerion));
     return this.httpClient.get<Version>(this.url + '/v/' + nombreDocumento + '/' + numeroVerion);
   }
 

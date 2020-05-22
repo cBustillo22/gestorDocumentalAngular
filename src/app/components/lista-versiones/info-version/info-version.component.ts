@@ -16,6 +16,7 @@ export class InfoVersionComponent implements OnInit {
   numeroVersion: number;
   version: Version;
   documento: Documento;
+  pdf: string;
 
   constructor(
     private servicioVersion: ServicioVersionService,
@@ -35,6 +36,9 @@ export class InfoVersionComponent implements OnInit {
     console.log(this.nombreDocumento + ' - ' + this.numeroVersion);
     this.setDocumento();
     this.setVersion();
+
+    console.log(this.documento);
+    console.log(this.version);
   }
 
   setDocumento(): void{

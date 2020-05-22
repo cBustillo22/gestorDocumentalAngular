@@ -26,7 +26,6 @@ export class DocumentosComponent implements OnInit {
     this.obtenerB64VersionMayor(this.documento.nombre);
     Swal.fire({
       title: '<strong>Visualizador de documentos</strong>',
-      icon: 'info',
       grow: 'fullscreen',
       html:
         '<iframe src="data:application/pdf;base64,' + this.base64Documento.base64File + '" width="100%" height="600px"></iframe>'

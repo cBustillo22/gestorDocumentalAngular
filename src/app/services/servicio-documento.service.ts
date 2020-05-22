@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Documento} from '../objects/documento';
 import {Observable} from 'rxjs';
+import {Version} from '../objects/version';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,8 @@ export class ServicioDocumentoService {
     return res;
   }
 
-  getDocumento(nombreDocumento: string){
+  getDocumento(nombreDocumento: string): Observable<Documento>{
+    console.log(this.httpClient.get<Documento>(this.url + '/' + nombreDocumento));
     return this.httpClient.get<Documento>(this.url + '/' + nombreDocumento);
   }
 }

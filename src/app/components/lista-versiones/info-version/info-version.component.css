@@ -2,6 +2,7 @@
 
 body{
   background: #D6D6D6;
+  height: 100%;
 }
 
 .container{
@@ -9,11 +10,8 @@ body{
   width: 70%;
   margin: auto;
 }
-
-.alineamiento{
-  margin: auto;
-}
-
 .visualizacion{
-  float: right;
+  float: left;
+  margin:auto;
+  width: 100%;
 }
